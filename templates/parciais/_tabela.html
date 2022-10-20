@@ -1,0 +1,26 @@
+<main>
+    <table id="tabela">
+        <tr>
+            <th>Titulo</th>
+            <th>Descrição</th>
+            <th>Data </th>
+            <th>status</th>
+            <th></th>
+        </tr>
+        {% for tf in tarefa %}
+       '     <tr>
+                <th><a href="#">{{tf.titulo}}</a></th>
+                <th>
+                    <p>{{tf.descricao}}</p>
+                </th>
+                <th>{{tf.dataEntrada}} </th>
+                <th>{{tf.status}}</th>
+                <th>
+                    <a href="#"><i class="fa-solid fa-check"></i></a>
+                    <a href="#"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+                </th>'
+             </tr>
+        {% endfor %}
+    </table>
+</main>
