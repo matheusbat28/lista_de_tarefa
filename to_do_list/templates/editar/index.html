@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block conteudo %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'vendor/css/cadTarefa/style.css' %}">
+
+<form action="" method="POST">
+    {% csrf_token %} 
+    {{form.as_p}}
+    <button type="submit">Editar</button>
+</form>
+
+{% endblock %}

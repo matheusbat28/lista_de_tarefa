@@ -51,3 +51,13 @@ def mudarStatus(request, id):
         tr.save()
 
     return redirect('home')
+
+def editar(request, id):
+    tr = Tarefa.objects.get(id=id)
+    form = TarefaForms()
+    
+    context = {
+        'form': form,
+        'itens': tr
+    }
+    return render(request, 'editar/index.html', context=context)
