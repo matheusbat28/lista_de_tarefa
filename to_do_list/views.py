@@ -37,3 +37,17 @@ def add_tarefa(request):
     )
 
     return redirect('home')
+
+
+def deletar(request, id):
+    Tarefa.objects.get(id=id).delete()
+    return redirect('home')
+
+def mudarStatus(request, id):
+    tr = Tarefa.objects.get(id=id)
+
+    if tr.status == False:
+        tr.status = True
+        tr.save()
+
+    return redirect('home')
