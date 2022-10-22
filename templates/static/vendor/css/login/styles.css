@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Dangrek&family=Jockey+One&family=Kaushan+Script&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --corBody: #595959;
+    --cores-decantes: #EE05F2, #0583F2, #04B2D9, #05F2AF, #F2CB05;
+}
+
+
+@keyframes corAnimada {
+    0% {
+        background-color: #0e0c0c;
+    }
+
+    20% {
+        background-color: #161414;
+    }
+
+    40% {
+        background-color: #030303;
+    }
+
+    60% {
+        background-color: #0c0b0b;
+    }
+
+    100% {
+        background-color: #000000;
+    }
+}
+
+@keyframes coresDecadente {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    animation: corAnimada 10s infinite;
+    font-family: 'Dangrek', cursive;
+    font-family: 'Jockey One', sans-serif;
+    font-family: 'Kaushan Script', cursive;
+}
+
+#conteiner {
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    box-shadow: rgba(142, 142, 150, 0.25) 0px 50px 100px -20px, rgba(235, 228, 228, 0.3) 0px 30px 60px -30px;
+    width: 40%;
+    height: 60%;
+    background: linear-gradient(to right, var(--cores-decantes));
+    animation: coresDecadente 10s linear infinite;
+
+}
+
+
+
+#formCadastro {
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 96%;
+    height: 96%;
+    border-radius: 1rem;
+    background-color: black;
+}
+
+#formCadastro h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+    color: #fff;
+    font-size: 3.5rem;
+    margin-bottom: 10%;
+}
+
+#formCadastro input {
+    width: 50%;
+    height: 5%;
+    margin-bottom: 2%;
+    border-radius: 1rem;
+}
+
+#formCadastro input::placeholder {
+    padding-left: 0.5rem;
+}
+
+#botoes {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    height: 50%;
+}
+
+.btnEstilo {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    width: 20%;
+    height: 20%;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 1rem;
+}
+
+.btnEstilo:hover {
+    background-color: #05F2AF;
+    color: #000000;
+}
+
+@media (max-width: 1700px) {
+    .btnEstilo {
+        font-size: 1.5rem;
+    }
+
+
+    @media (max-width: 1500px) {
+        #conteiner {
+            width: 50%;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        #conteiner {
+            width: 60%;
+        }
+    }
+
+
+    @media (max-width: 1000px) {
+        #conteiner {
+            width: 60%;
+        }
+
+        .btnEstilo {
+            font-size: 1.3rem;
+        }
+    }
+
+
+    @media (max-width: 800px) {
+        #conteiner {
+            width: 70%;
+        }
+
+    }
+
+
+    @media (max-width: 700px) {
+        #conteiner {
+            width: 80%;
+        }
+    }
+
+
+    @media (max-width: 600px) {
+        #conteiner {
+            width: 90%;
+        }
+    }
+
+    @media (max-width: 500px) {
+        #conteiner {
+            width: 95%;
+        }
+
+        #formCadastro input {
+            margin-bottom: 4%;
+            width: 80%;
+        }
+
+        .btnEstilo {
+            font-size: 1.5rem;
+            width: 40%;
+            height: 20%;
+        }
+
+    }
+}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+ <link rel="stylesheet" href="{% static 'vendor/css/login/styles.css' %}">
+{% endblock %}
+
+{% block titulo %} Login {% endblock %}
+
+
+{% block conteudo %}
+    {% include 'parciais/_formLogin.html' %}
+{% endblock %}
